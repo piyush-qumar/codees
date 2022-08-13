@@ -17,9 +17,9 @@ public:
                   return false;
             if(row-i>=0 and col-i>=0 and board[row-i][col-i]=='Q')
                   return false;
-            // if(row +i<n && col- i>= 0 && board[row+i][col-i]=='Q')                                     return false;
-            // if(row + i< n && col+i<n && board[row+i][col+i]=='Q') 
-            //       return false;
+            if(row +i<n && col- i>= 0 && board[row+i][col-i]=='Q')                                     return false;
+            if(row + i< n && col+i<n && board[row+i][col+i]=='Q') 
+                  return false;
         }
         return true;
     }
