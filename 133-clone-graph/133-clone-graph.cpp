@@ -23,9 +23,8 @@ class Solution {
 public:
     unordered_map<Node*, Node*> copies;
     Node* cloneGraph(Node* node) {
-        if (!node) {
-            return NULL;
-        }
+        if (!node) 
+            return nullptr;
         if (copies.find(node) == copies.end()) {
             copies[node] = new Node(node -> val, {});
             for (Node* neighbor : node -> neighbors) {
