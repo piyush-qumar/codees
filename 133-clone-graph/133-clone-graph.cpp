@@ -27,7 +27,7 @@ public:
             return nullptr;
         if (copies.find(node) == copies.end()) {
             copies[node] = new Node(node -> val, {});
-            for (Node* neighbor : node -> neighbors) {
+            for (auto neighbor : node -> neighbors) {
                 copies[node] -> neighbors.push_back(cloneGraph(neighbor));
             }
         }
