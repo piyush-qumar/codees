@@ -2,7 +2,8 @@ class Solution {
 public:
     int firstUniqChar(string s) {
         unordered_map<char,pair<int,int>>m;
-        int x=s.size();
+        int x=10000000;
+        int c=x;
         for (int i = 0; i < s.size(); i++){
             m[s[i]].first++;
             m[s[i]].second=i;
@@ -17,6 +18,9 @@ public:
              x = min(x, b.second);
             //cout<<x<<endl;
         }
-        return x==s.size()?-1:x ;
+        if(x==c)
+        return -1 ;
+        else 
+            return x;
     }
 };
