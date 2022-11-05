@@ -42,7 +42,7 @@ class Solution
     string getp(string str,TrieNode*root)
     {
        // TrieNode *curr=root;
-        int n=str.size();
+        int n=str.length();
         string prefix="";
          for(int i=0;i<n;i++)
         {   //int id=str[i]-'a';
